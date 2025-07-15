@@ -27,7 +27,7 @@ I’m passionate about building reliable, scalable, and user-centric software. I
 ## 📫 Let's Connect
 
 - [LinkedIn](https://linkedin.com/in/prashanttelore)  
-- 📧 Email: prashanttelore@example.com *(replace with your real email)*
+- 📧 Email: prashanttelore0@gmail.com
 
 ---
 
