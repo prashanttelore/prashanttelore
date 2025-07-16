@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prashant's - Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="logo"><span>Prashant Telore</span></div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#aboutme">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#aboutme">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <p id="craftertag">Crafted with <span id="hearts">&hearts;</span> by PT</p>
+    </div>
+  </header>
+  <section class="container">
+    <main>
+      <div class="main-container">
+        <div class="picture-container">
+          <img src="img/pic.png">
+        </div>
+        <div class="desc-container" id="home">
+          <div class="typewriter">Hi, I’m <span>Prashant Telore</span></div>
+          <p>A Full-Stack Developer, Creative Thinker, and Tech Enthusiast. I'm a curious and passionate developer who
+            thrives on turning ideas into practical, user-focused solutions. With a strong foundation in software
+            development and a deep interest in solving real-world problems, I constantly challenge myself to learn,
+            grow, and push creative boundaries. Whether it's building from scratch or refining existing systems, I
+            believe in writing clean, efficient code and creating digital experiences that are both functional and
+            meaningful. Driven by a love for innovation and a commitment to continuous improvement, I’m always ready to
+            explore new horizons and make an impact through thoughtful, purposeful development.</p>
+          <a href="#contact"><button></button></a>
+        </div>
+      </div>
+      </div>
+
+      <div class="about-me" id="aboutme">
+        <h2>Know About Me!</h2>
+        <div class="aboutme-container">
+          <div class="aboutme-desc-container">
+            <p>I'm Prashant Telore, a highly motivated and self-taught developer with a deep interest in crafting
+              meaningful digital experiences. I’m known for my strong focus, curiosity, and dedication to personal
+              growth. From a young age, I’ve been drawn to the logic and creativity that software development demands,
+              and over time, it has become more than just a skill—it's my passion. I value precision, clarity, and
+              purpose in everything I build. I constantly seek improvement and never settle for average, driven by an
+              inner hunger to create things that matter. Outside of coding, I enjoy reflecting, setting high goals, and
+              challenging myself to become better—technically and personally—each day.</p>
+            <b>Words I Live By -</b>
+            <p><i>"Mastery in code isn’t flaunted — it’s hidden in the mystery only few can ever decode."</i></p>
+          </div>
+          <div class="aboutme-picture-container">
+            <img src="img/pic.png">
+          </div>
+        </div>
+        <div class="aboutme-info">
+          <div class="info-container">
+            <h3>5+ Projects</h3>
+            <p>Built and deployed 5+ unique projects ranging from cultural platforms to mental health apps.
+              Each project is self-designed, functional, and solves a real-world problem.
+              Focused on clean architecture, performance, and security.
+              Projects include admin panels, skill exchanges, payment gateways, and more.
+              Every line of code is written with a problem-solving mindset.</p>
+          </div>
+          <div class="info-container">
+            <h3>Languages</h3>
+            <p>Proficient in Java, Python, PHP.
+              Uses each language based on the project's nature and system demands.
+              Loves diving deep into language internals and best practices.
+              Switches comfortably between backend services, CLI tools, and web apps.
+              Keeps learning syntax and patterns to write optimized, maintainable code.</p>
+          </div>
+          <div class="info-container">
+            <h3>Open Source Contributor</h3>
+            <p>Actively contributes to open-source tools and libraries.
+              Believes in the power of community-driven development.
+              Writes clean, documented code to help others grow.
+              Open-sourced all major personal projects.
+              Always ready to collaborate and improve others' work.</p>
+          </div>
+          <div class="info-container">
+            <h3>Framework Familarity</h3>
+            <p>Actively contributes to open-source tools and libraries.
+              Believes in the power of community-driven development.
+              Writes clean, documented code to help others grow.
+              Always ready to collaborate and improve others' work.</p>
+          </div>
+        </div>
+        <div class="mywork-container" id="projects">
+          <h2>Explore My Work...</h2>
+          <p>Explore a showcase of innovative projects crafted with passion, purpose, and a drive to make ideas come
+            alive</p>
+          <div class="hr-container"></div>
+          <div class="scroller-wrapper">
+            <button class="scroll-btn left">&#8592;</button>
+
+            <div class="scroller" id="scroller">
+
+              <div class="item">
+                <h3>Shop-G</h3>
+                <p>Shop-G is a PHP-based web application designed for a seamless grocery shopping experience. The
+                  platform includes all the essential features of a modern shopping application, including cart
+                  management, product listings, user feedback, and an admin panel to manage the products. The
+                  application is powered by a MySQL database, ensuring smooth storage and retrieval of product and user
+                  information.</p>
+                <a href="https://github.com/EthicalGT/Shop-G.git"><button>Explore!</button></a>
+              </div>
+
+              <div class="item">
+                <h3>CineVibe</h3>
+                <p>CineVibe is an open-source web application designed for movie lovers to watch, download, and book
+                  tickets for movies online. It provides a simple yet powerful platform where users can explore movie
+                  descriptions, ratings, and more. The site is managed by an admin who has full control over site
+                  content through CRUD (Create, Read, Update, Delete) operations.</p>
+                <a href="https://github.com/EthicalGT/CineVibe.git"><button>Explore!</button></a>
+              </div>
+
+              <div class="item">
+                <h3>Kavach</h3>
+                <p>Kavach is a mobile application designed for women's safety, offering a range of ultimate security
+                  features to provide immediate help in emergencies. With functionalities like SOS alerts, live location
+                  sharing, emergency calling services, and admin notifications, Kavach ensures the safety and well-being
+                  of its users in critical situations.</p>
+                <a href="https://github.com/EthicalGT/Kavach.git"><button>Explore!</button></a>
+              </div>
+
+              <div class="item">
+                <h3>NewsHub</h3>
+                <p>NewsHub is a dynamic news platform where users can view the latest news, send feedback, and interact
+                  with published articles. Admins have full control over managing news, ensuring the content stays fresh
+                  and relevant.</p>
+                <a href="https://github.com/EthicalGT/NewsHub.git"><button>Explore!</button></a>
+              </div>
+
+            </div>
+
+            <button class="scroll-btn right">&#8594;</button>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </section>
+  <section id="skills">
+    <div class="myskills-container">
+      <div class="skills">
+        <div class="skillbox">
+          <img src="img/web-dev.png" alt="Web Development">
+          <h3>Web Development</h3>
+          <p>Experienced in building responsive and dynamic websites using HTML, CSS, JavaScript, and modern frameworks.
+          </p>
+        </div>
+
+        <div class="skillbox">
+          <img src="img/java.png" alt="Java">
+          <h3>Java</h3>
+          <p>Proficient in Java programming for developing robust applications, including both desktop and server-side
+            solutions.</p>
+        </div>
+
+        <div class="skillbox">
+          <img src="img/python.png" alt="Python">
+          <h3>Python</h3>
+          <p>Skilled in Python for web development, data analysis, and machine learning, with a focus on writing clean
+            and efficient code.</p>
+        </div>
+
+
+        <div class="skillbox">
+          <img src="img/php.png" alt="PHP">
+          <h3>PHP</h3>
+          <p>Strong in PHP for server-side web development, building dynamic websites and web applications with
+            databases.</p>
+        </div>
+
+        <div class="skillbox">
+          <img src="img/android.png" alt="Android App Development (Java)">
+          <h3>Android App Development (Java)</h3>
+          <p>Experienced in developing Android mobile applications using Java, from UI design to backend integration.
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <div class="contactme-container" id="contact">
+      <div class="contactme-anim">
+        <img src="img/letter-unscreen.gif">
+        <br>
+        <h3>Drop Your Inquiries here!</h3>
+      </div>
+      <div class="contactme-form">
+        <h2>Get In Touch</h2>
+        <p>Reach out for inquiries or collaborations.</p>
+        <form action="https://api.web3forms.com/submit" method="POST" name="contactForm"
+          onsubmit="return validateForm()">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="msg">Message:</label>
+          <textarea id="msg" name="message" required></textarea>
+
+          <input type="hidden" name="access_key" value="5b1f4f88-c521-4b6d-811c-3f83456ad4b1">
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-links">
+      <p><i class="fas fa-envelope"></i> <a href="mailto:prashanttelore0@gmail.com">prashanttelore0@gmail.com</a></p>
+    </div>
+    <div class="socialmedia-links">
+      <a href="https://github.com/prashanttelore/prashanttelore" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.instagram.com/the_pt_official?igsh=MTQ1dnY2anNrcWRhag%3D%3D" target="_blank"
+        title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/prashant-telore-523407375/" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://wa.me/qr/TTCPPLO4MHO3B1" target="_blank" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+    <p class="footer-line">&copy; 2025 Prashant Telore. All Rights Reserved.</p>
+  </footer>
+  <script src="js/script.js">
+  </script>
+</body>
+
+</html>
