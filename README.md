@@ -1,6 +1,6 @@
 <div align="center">
 
-  # ⚡ Prashant Telore — Developer Portfolio
+  # ⚡ Hey I am Prashant Telore
 
   **Full Stack Web Developer & Software Engineer | Pune, India**
 
