@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
 import { Mail, MapPin, Send, CheckCircle2, Copy, Github, Linkedin } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export const ContactSection: React.FC = () => {
   const { developer } = portfolioData;
@@ -32,23 +33,39 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
+    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-sky-500/5 rounded-full blur-[100px] pointer-events-none" />
+      <motion.div
+        animate={{ scale: [1, 1.2, 1], opacity: [0.05, 0.15, 0.05] }}
+        transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+        className="absolute bottom-10 right-10 w-80 h-80 bg-sky-500/10 rounded-full blur-[100px] pointer-events-none"
+      />
 
       {/* Section Header */}
-      <div className="text-center space-y-3 mb-16">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="text-center space-y-3 mb-16"
+      >
         <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
           Contact <span className="cyan-gradient-text">Me</span>
         </h2>
         <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
           Have a project in mind or want to discuss opportunities? Send a message below.
         </p>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         {/* Left Column: Direct Info */}
-        <div className="lg:col-span-5 space-y-8 navy-glass-card p-8 rounded-2xl border border-slate-800/80">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="lg:col-span-5 space-y-8 navy-glass-card p-8 rounded-2xl border border-slate-800/80"
+        >
           <div>
             <h3 className="text-2xl font-bold text-white mb-2">Get in Touch</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
@@ -66,7 +83,9 @@ export const ContactSection: React.FC = () => {
                 <span className="text-sm font-mono text-[#38bdf8] truncate">
                   {developer.email}
                 </span>
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={handleCopyEmail}
                   className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white rounded-md flex items-center gap-1.5 transition-colors shrink-0"
                 >
@@ -81,7 +100,7 @@ export const ContactSection: React.FC = () => {
                       <span>Copy</span>
                     </>
                   )}
-                </button>
+                </motion.button>
               </div>
             </div>
 
@@ -92,13 +111,15 @@ export const ContactSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Social Channels (GitHub & LinkedIn only) */}
+          {/* Social Channels */}
           <div className="pt-4 border-t border-slate-800/80 space-y-3">
             <div className="text-xs font-mono text-slate-400 uppercase tracking-wider">
               Social Channels
             </div>
             <div className="flex items-center gap-3">
-              <a
+              <motion.a
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
                 href={developer.github}
                 target="_blank"
                 rel="noreferrer"
@@ -106,8 +127,10 @@ export const ContactSection: React.FC = () => {
               >
                 <Github className="w-4 h-4 text-[#38bdf8]" />
                 <span>GitHub</span>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
                 href={developer.linkedin}
                 target="_blank"
                 rel="noreferrer"
@@ -115,82 +138,104 @@ export const ContactSection: React.FC = () => {
               >
                 <Linkedin className="w-4 h-4 text-[#38bdf8]" />
                 <span>LinkedIn</span>
-              </a>
+              </motion.a>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Column: Contact Form */}
-        <div className="lg:col-span-7 navy-glass-card p-8 rounded-2xl border border-slate-800/80">
-          {formSubmitted ? (
-            <div className="py-12 text-center space-y-4 animate-fade-in">
-              <div className="w-16 h-16 rounded-full bg-sky-950/60 border border-sky-800 flex items-center justify-center mx-auto">
-                <CheckCircle2 className="w-8 h-8 text-[#38bdf8]" />
-              </div>
-              <h3 className="text-2xl font-bold text-white">Message Dispatched!</h3>
-              <p className="text-slate-400 text-sm max-w-md mx-auto">
-                Thank you for reaching out. Prashant will respond to your inquiry shortly.
-              </p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                <Mail className="w-5 h-5 text-[#38bdf8]" /> Send Message
-              </h3>
-
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-xs font-semibold text-slate-300 uppercase mb-2">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="e.g. Alex Mercer"
-                    className="w-full px-4 py-3 bg-slate-900/90 border border-slate-800 rounded-xl text-slate-200 text-sm focus:outline-none focus:border-[#38bdf8] transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-slate-300 uppercase mb-2">
-                    Your Email Address
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="e.g. alex@company.com"
-                    className="w-full px-4 py-3 bg-slate-900/90 border border-slate-800 rounded-xl text-slate-200 text-sm focus:outline-none focus:border-[#38bdf8] transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-slate-300 uppercase mb-2">
-                    Message Details
-                  </label>
-                  <textarea
-                    rows={4}
-                    required
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Describe your role, project scope, or inquiry..."
-                    className="w-full px-4 py-3 bg-slate-900/90 border border-slate-800 rounded-xl text-slate-200 text-sm focus:outline-none focus:border-[#38bdf8] transition-colors resize-none"
-                  />
-                </div>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full py-3.5 cyan-btn font-semibold text-sm rounded-xl flex items-center justify-center gap-2"
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="lg:col-span-7 navy-glass-card p-8 rounded-2xl border border-slate-800/80"
+        >
+          <AnimatePresence mode="wait">
+            {formSubmitted ? (
+              <motion.div
+                key="success"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                className="py-12 text-center space-y-4"
               >
-                <Send className="w-4 h-4" /> Send Message
-              </button>
-            </form>
-          )}
-        </div>
+                <div className="w-16 h-16 rounded-full bg-sky-950/60 border border-sky-800 flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="w-8 h-8 text-[#38bdf8]" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Message Dispatched!</h3>
+                <p className="text-slate-400 text-sm max-w-md mx-auto">
+                  Thank you for reaching out. Prashant will respond to your inquiry shortly.
+                </p>
+              </motion.div>
+            ) : (
+              <motion.form
+                key="form"
+                initial={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+                <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                  <Mail className="w-5 h-5 text-[#38bdf8]" /> Send Message
+                </h3>
+
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-300 uppercase mb-2">
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      placeholder="e.g. Alex Mercer"
+                      className="w-full px-4 py-3 bg-slate-900/90 border border-slate-800 rounded-xl text-slate-200 text-sm focus:outline-none focus:border-[#38bdf8] transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-300 uppercase mb-2">
+                      Your Email Address
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      placeholder="e.g. alex@company.com"
+                      className="w-full px-4 py-3 bg-slate-900/90 border border-slate-800 rounded-xl text-slate-200 text-sm focus:outline-none focus:border-[#38bdf8] transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-300 uppercase mb-2">
+                      Message Details
+                    </label>
+                    <textarea
+                      rows={4}
+                      required
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      placeholder="Describe your role, project scope, or inquiry..."
+                      className="w-full px-4 py-3 bg-slate-900/90 border border-slate-800 rounded-xl text-slate-200 text-sm focus:outline-none focus:border-[#38bdf8] transition-colors resize-none"
+                    />
+                  </div>
+                </div>
+
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  type="submit"
+                  className="w-full py-3.5 cyan-btn font-semibold text-sm rounded-xl flex items-center justify-center gap-2"
+                >
+                  <Send className="w-4 h-4" /> Send Message
+                </motion.button>
+              </motion.form>
+            )}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );

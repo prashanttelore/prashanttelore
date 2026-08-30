@@ -3,6 +3,7 @@
 import React from 'react';
 import { Project } from '../data/portfolioData';
 import { X, ExternalLink, Github, CheckCircle2, Cpu, FileText } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface ProjectModalProps {
   project: Project;
@@ -11,18 +12,31 @@ interface ProjectModalProps {
 
 export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#080c14]/85 backdrop-blur-md animate-fade-in">
-      <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.25 }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#080c14]/85 backdrop-blur-md"
+      onClick={onClose}
+    >
+      <motion.div
+        initial={{ opacity: 0, scale: 0.92, y: 20 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.92, y: 20 }}
+        transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
         className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto navy-glass-card rounded-2xl border border-slate-800 shadow-2xl p-6 sm:p-8 space-y-6"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
-        <button
+        <motion.button
+          whileHover={{ scale: 1.1, rotate: 90 }}
+          whileTap={{ scale: 0.9 }}
           onClick={onClose}
           className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white bg-slate-900/80 border border-slate-800 rounded-lg transition-colors"
         >
           <X className="w-5 h-5" />
-        </button>
+        </motion.button>
 
         {/* Header Title */}
         <div className="space-y-1 pr-10">
@@ -81,24 +95,28 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
         {/* Modal Actions */}
         <div className="flex items-center justify-end gap-4 pt-4 border-t border-slate-800">
-          <a
+          <motion.a
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
             href={project.githubUrl}
             target="_blank"
             rel="noreferrer"
             className="px-4 py-2 bg-slate-900 border border-slate-800 text-slate-300 hover:text-white rounded-lg text-sm font-semibold flex items-center gap-2 transition-colors"
           >
             <Github className="w-4 h-4" /> View Source
-          </a>
-          <a
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
             href={project.demoUrl}
             target="_blank"
             rel="noreferrer"
             className="px-5 py-2 cyan-btn text-sm font-semibold flex items-center gap-2"
           >
             <ExternalLink className="w-4 h-4" /> Live Preview
-          </a>
+          </motion.a>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };

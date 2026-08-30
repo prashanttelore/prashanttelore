@@ -3,6 +3,7 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
 import { Code, Server, Database, Rocket } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export const ServicesSection: React.FC = () => {
   const { services } = portfolioData;
@@ -22,26 +23,64 @@ export const ServicesSection: React.FC = () => {
     }
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 35 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section id="services" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
+    <section id="services" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-purple-500/5 rounded-full blur-[100px] pointer-events-none" />
+      <motion.div
+        animate={{ scale: [1, 1.2, 1], opacity: [0.05, 0.15, 0.05] }}
+        transition={{ repeat: Infinity, duration: 9, ease: "easeInOut" }}
+        className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-[110px] pointer-events-none"
+      />
 
       {/* Section Title */}
-      <div className="text-center space-y-3 mb-16">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="text-center space-y-3 mb-16"
+      >
         <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
           My <span className="cyan-gradient-text">Services</span>
         </h2>
         <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
           High-impact software engineering solutions tailored for modern digital web products
         </p>
-      </div>
+      </motion.div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
         {services.map((service, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={itemVariants}
+            whileHover={{ y: -8, scale: 1.02 }}
+            transition={{ duration: 0.25 }}
             className="navy-glass-card navy-glass-card-hover p-8 rounded-2xl border border-slate-800/80 space-y-5"
           >
             <div className="w-14 h-14 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-center">
@@ -63,9 +102,9 @@ export const ServicesSection: React.FC = () => {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

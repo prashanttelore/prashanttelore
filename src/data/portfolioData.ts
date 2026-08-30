@@ -65,13 +65,13 @@ export interface PortfolioData {
 
 export const portfolioData: PortfolioData = {
   developer: {
-    brandName: "PrashantDev",
+    brandName: "Prashant Telore - SOftware Developer",
     firstName: "Prashant",
-    lastName: "Developer",
+    lastName: "Telore",
     title: "Full Stack Web Developer",
     welcomeMessage: "Welcome to my portfolio",
-    location: "San Francisco, CA / Remote",
-    email: "prashant.dev@example.com",
+    location: "Pune, Maharashtra, India",
+    email: "prashanttelore0@gmail.com",
     github: "https://github.com/prashanttelore",
     linkedin: "https://www.linkedin.com/in/prashant-telore-523407375",
     bio: "I craft beautiful, high-performance web applications using modern technologies like React, Next.js, and JavaScript.",
@@ -80,9 +80,9 @@ export const portfolioData: PortfolioData = {
     quote: "I believe in writing code that's not just functional, but also maintainable, scalable, and a joy to work with.",
     avatar: "/assets/prashant-avatar.png",
     stats: {
-      projectsCompleted: "50+",
-      yearsExperience: "3+",
-      technologies: "20+",
+      projectsCompleted: "3+",
+      yearsExperience: "Self Employed",
+      technologies: "3+",
     },
   },
 
