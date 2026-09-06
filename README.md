@@ -21,8 +21,9 @@
 
 A modern, production-grade **Full Stack Developer Portfolio** engineered with **Next.js 14 App Router**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**. Designed with a sophisticated dark-navy and cyan glassmorphism aesthetic, fluid micro-interactions, complete Schema.org JSON-LD technical SEO, and interactive project deep-dives.
 
-### 🎥 Featured Flagship Project: **ShopG**
-- **ShopG – AI-Powered Grocery E-Commerce Platform**: Full-stack e-commerce system built with ReactJS, Node.js, Express.js, and MongoDB. Features **Chef AI** (integrating Google Gemini API to convert recipes into ingredient lists with regex catalog matching) and an automated **Smart Substitute** engine for zero-stock items.
+### 🎥 Featured Projects:
+1. **ShopG – AI-Powered Grocery E-Commerce Platform**: Full-stack e-commerce system built with ReactJS, Node.js, Express.js, and MongoDB. Features **Chef AI** (integrating Google Gemini API to convert recipes into ingredient lists with regex catalog matching) and an automated **Smart Substitute** engine for zero-stock items.
+2. **Kavach – Women Safety App**: Android SOS application with real-time GPS location sharing and automated emergency calling on button press. Features trusted contact management, self-defense video portal, and a relational MySQL backend.
 
 ---
 
@@ -47,7 +48,7 @@ A modern, production-grade **Full Stack Developer Portfolio** engineered with **
 | **Frontend Framework** | Next.js 14 (App Router), React 18, TypeScript |
 | **Styling & UI** | Tailwind CSS, Vanilla CSS Glassmorphism, Lucide Icons |
 | **Animations** | Framer Motion 11 |
-| **Featured Stack** | Node.js, Express.js, REST APIs, MongoDB, MySQL, Python, Java |
+| **Featured Stack** | Node.js, Express.js, REST APIs, MongoDB, MySQL, Python, Java, Android |
 | **AI Integration** | Google Gemini API (Recipe to Cart Engine) |
 | **Deployment & Hosting**| Vercel, Render |
 
@@ -79,7 +80,7 @@ Portfolio/
 │   │   └── portfolioData.ts  # Central Profile Data, Projects & Skills Array
 │   └── index.css             # Global CSS Utility Tokens & Animations
 ├── public/                   # Static Image Assets & Verification Tokens
-│   ├── assets/               # Screenshots, Thumbnails & Avatar Images
+│   ├── assets/               # Screenshots, Thumbnails, Avatar & Resume PDF
 │   └── googlef4d6ed83535e52ae.html # Google Search Console Token
 ├── next.config.mjs           # Next.js Build Configuration
 ├── tailwind.config.js        # Tailwind Theme & Custom Shadow Glow Tokens

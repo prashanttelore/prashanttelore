@@ -65,7 +65,7 @@ export interface PortfolioData {
 
 export const portfolioData: PortfolioData = {
   developer: {
-    brandName: "Prashant Telore - SOftware Developer",
+    brandName: "Prashant Telore - Software Developer",
     firstName: "Prashant",
     lastName: "Telore",
     title: "Full Stack Web Developer",
@@ -80,9 +80,9 @@ export const portfolioData: PortfolioData = {
     quote: "I believe in writing code that's not just functional, but also maintainable, scalable, and a joy to work with.",
     avatar: "/assets/prashant-avatar.png",
     stats: {
-      projectsCompleted: "3+",
+      projectsCompleted: "2+",
       yearsExperience: "Self Employed",
-      technologies: "3+",
+      technologies: "10+",
     },
   },
 
@@ -166,59 +166,37 @@ export const portfolioData: PortfolioData = {
       ],
       techStack: ["ReactJS", "Node.js", "Express.js", "MongoDB", "JavaScript"],
       image: "/assets/shopg-project.png",
-      demoUrl: "https://example.com/demo1",
+      demoUrl: "https://shopgservice.vercel.app/",
       githubUrl: "https://github.com/prashanttelore",
       featured: true,
     },
     {
-      id: "neural-core-ai",
-      title: "Neural Core AI Engine",
-      subtitle: "Autonomous LLM workflow & vector search aggregator",
-      category: "AI / Cloud",
-      description: "An AI orchestration engine for multi-modal agent workflows, semantic caching, and dynamic prompt routing.",
-      longDescription: "Neural Core AI simplifies complex enterprise LLM pipeline execution. It features token consumption optimization, MongoDB data persistence, and real-time streaming UI components.",
+      id: "kavach-safety-app",
+      title: "Kavach – Women Safety App",
+      subtitle: "Android SOS app with real-time GPS location sharing & automated emergency calling",
+      category: "Backend",
+      description: "Developed an Android SOS app with real-time GPS location sharing and automated emergency calling on button press; integrated trusted contact management, self-defense tutorials, and a secure MySQL backend.",
+      longDescription: "Developed an Android SOS app with real-time GPS location sharing and automated emergency calling on button press. Integrated trusted contact management, self-defense tutorials, and a secure MySQL backend for persistent user data. Designed an intuitive Android UI optimized for quick access during emergencies with minimal interaction steps.",
       architecture: [
-        "Python Backend Engine",
-        "MongoDB Database Integration",
-        "React + Tailwind CSS Interface"
+        "Real-time GPS location tracking & emergency SMS/Call dispatch engine",
+        "Trusted contact management & self-defense video tutorial portal",
+        "Secure relational MySQL backend database for persistent user data",
+        "Emergency-optimized Android UI designed for rapid multi-touch trigger"
       ],
       challenges: [
-        "Reduced LLM API latencies by 65% using semantic embedding cache layers."
+        "Optimized emergency SOS trigger sequence for minimal interaction steps during urgent scenarios.",
+        "Engineered low-latency background GPS location payload transmission with low power consumption."
       ],
       metrics: [
-        "65% cost reduction in token usage",
-        "4.2x faster response synthesis"
+        "Instant one-click SOS call & location dispatch",
+        "Sub-50ms MySQL user data persistence",
+        "Minimal interaction flow during emergencies"
       ],
-      techStack: ["Python", "Java", "React", "MongoDB", "Render"],
-      image: "/assets/project-ai.png",
-      demoUrl: "https://example.com/demo2",
+      techStack: ["Java", "Android", "MySQL"],
+      image: "/assets/kavach-project.png",
+      demoUrl: "https://github.com/prashanttelore",
       githubUrl: "https://github.com/prashanttelore",
       featured: true,
-    },
-    {
-      id: "dev-pulse-dashboard",
-      title: "DevPulse Analytics Dashboard",
-      subtitle: "Real-time infrastructure & application metrics console",
-      category: "Frontend",
-      description: "A sleek analytics console providing real-time data visualization, latency metrics, and automated alert logs.",
-      longDescription: "DevPulse delivers real-time dashboard visualizations for server health and network telemetry with zero UI latency.",
-      architecture: [
-        "React + JavaScript + Chart.js",
-        "WebSocket Live Telemetry Feed",
-        "Tailwind CSS Dark Theme"
-      ],
-      challenges: [
-        "Maintained 60 FPS charts under heavy 10,000 data point streaming feeds."
-      ],
-      metrics: [
-        "60 FPS smooth chart rendering",
-        "Used by 15+ internal engineering teams"
-      ],
-      techStack: ["React", "JavaScript", "Tailwind CSS", "Chart.js", "WebSockets"],
-      image: "/assets/project-cyberdeck.png",
-      demoUrl: "https://example.com/demo3",
-      githubUrl: "https://github.com/prashanttelore",
-      featured: false,
     }
   ],
 
