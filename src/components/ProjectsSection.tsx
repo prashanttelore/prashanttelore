@@ -42,7 +42,7 @@ export const ProjectsSection: React.FC = () => {
           Featured <span className="cyan-gradient-text">Projects</span>
         </h2>
         <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-          Full-stack software engineering projects, Android emergency SOS systems, and REST API architectures
+          Full-stack web applications, OTT streaming platforms, and Android emergency SOS systems
         </p>
       </motion.div>
 
@@ -75,7 +75,7 @@ export const ProjectsSection: React.FC = () => {
       </motion.div>
 
       {/* Projects Grid Display */}
-      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <AnimatePresence mode="popLayout">
           {filteredProjects.map((project) => (
             <motion.div

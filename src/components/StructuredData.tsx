@@ -34,6 +34,7 @@ export const StructuredData: React.FC = () => {
       'TypeScript',
       'Python',
       'Java',
+      'PHP',
       'MySQL',
       'REST APIs',
       'Full Stack Web Development',

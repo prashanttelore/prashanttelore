@@ -80,7 +80,7 @@ export const portfolioData: PortfolioData = {
     quote: "I believe in writing code that's not just functional, but also maintainable, scalable, and a joy to work with.",
     avatar: "/assets/prashant-avatar.png",
     stats: {
-      projectsCompleted: "2+",
+      projectsCompleted: "3+",
       yearsExperience: "Self Employed",
       technologies: "10+",
     },
@@ -95,7 +95,7 @@ export const portfolioData: PortfolioData = {
     {
       title: "Backend",
       icon: "wrench",
-      subtitle: "Node.js, Express",
+      subtitle: "Node.js, Express, PHP",
     },
     {
       title: "Database",
@@ -105,7 +105,7 @@ export const portfolioData: PortfolioData = {
     {
       title: "Languages",
       icon: "code",
-      subtitle: "Python, Java, JavaScript",
+      subtitle: "Python, Java, JavaScript, PHP",
     },
     {
       title: "DevOps",
@@ -197,6 +197,34 @@ export const portfolioData: PortfolioData = {
       demoUrl: "https://github.com/prashanttelore",
       githubUrl: "https://github.com/prashanttelore",
       featured: true,
+    },
+    {
+      id: "cinevibe-ott-platform",
+      title: "CineVibe – OTT Streaming Platform",
+      subtitle: "Full-stack streaming platform with movie catalog, multi-quality downloads & admin console",
+      category: "Full Stack",
+      description: "Built a full-stack OTT platform with movie listings, category-based browsing, and detailed content views; implemented multi-quality download options and an admin dashboard for managing movies and user accounts via MySQL.",
+      longDescription: "Built a full-stack OTT platform with movie listings, category-based browsing, and detailed content views. Implemented multi-quality download options and an admin dashboard for managing movies and user accounts via MySQL. Designed a clean UI with JavaScript for dynamic interactions and PHP for server-side rendering.",
+      architecture: [
+        "Server-side rendered PHP architecture with dynamic JavaScript content interactions",
+        "Multi-quality media download options & streaming content delivery pipeline",
+        "Normalized MySQL relational schemas for movies, categories, and user accounts",
+        "Comprehensive administrative dashboard for catalog management and user oversight"
+      ],
+      challenges: [
+        "Engineered reliable multi-quality download options and bandwidth-efficient streaming views.",
+        "Optimized MySQL relational queries and category indexing for rapid content browsing."
+      ],
+      metrics: [
+        "Instant category-based browsing & dynamic content views",
+        "Reliable multi-quality downloads via MySQL asset management",
+        "Full administrative control over movie catalog & accounts"
+      ],
+      techStack: ["PHP", "MySQL", "JavaScript"],
+      image: "/assets/cinevibe-project.png",
+      demoUrl: "https://github.com/prashanttelore",
+      githubUrl: "https://github.com/prashanttelore",
+      featured: true,
     }
   ],
 
@@ -209,6 +237,7 @@ export const portfolioData: PortfolioData = {
         { name: "JavaScript (ES6+)", level: 95 },
         { name: "Python", level: 88 },
         { name: "Java", level: 85 },
+        { name: "PHP", level: 86 },
       ]
     },
     {

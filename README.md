@@ -24,6 +24,7 @@ A modern, production-grade **Full Stack Developer Portfolio** engineered with **
 ### 🎥 Featured Projects:
 1. **ShopG – AI-Powered Grocery E-Commerce Platform**: Full-stack e-commerce system built with ReactJS, Node.js, Express.js, and MongoDB. Features **Chef AI** (integrating Google Gemini API to convert recipes into ingredient lists with regex catalog matching) and an automated **Smart Substitute** engine for zero-stock items.
 2. **Kavach – Women Safety App**: Android SOS application with real-time GPS location sharing and automated emergency calling on button press. Features trusted contact management, self-defense video portal, and a relational MySQL backend.
+3. **CineVibe – OTT Streaming Platform**: Full-stack OTT streaming platform built with PHP, MySQL, and JavaScript. Features category-based browsing, movie detail views, multi-quality downloads, and an administrative management dashboard.
 
 ---
 
@@ -48,7 +49,7 @@ A modern, production-grade **Full Stack Developer Portfolio** engineered with **
 | **Frontend Framework** | Next.js 14 (App Router), React 18, TypeScript |
 | **Styling & UI** | Tailwind CSS, Vanilla CSS Glassmorphism, Lucide Icons |
 | **Animations** | Framer Motion 11 |
-| **Featured Stack** | Node.js, Express.js, REST APIs, MongoDB, MySQL, Python, Java, Android |
+| **Featured Stack** | Node.js, Express.js, REST APIs, MongoDB, MySQL, PHP, Python, Java, Android |
 | **AI Integration** | Google Gemini API (Recipe to Cart Engine) |
 | **Deployment & Hosting**| Vercel, Render |
 
